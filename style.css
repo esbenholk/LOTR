@@ -1,0 +1,181 @@
+@-webkit-keyframes backgroundgradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@-moz-keyframes backgroundgradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes backgroundgradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+body {
+  box-sizing: border-box;
+  background: linear-gradient(270deg, #72f692, yellow, #feabff);
+  background-size: 600% 600%;
+  animation: backgroundgradient 30s ease infinite;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.overlayer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: linear-gradient(270deg, #72f692, yellow, #feabff);
+  background-size: 600% 600%;
+  animation: backgroundgradient 8s ease infinite;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0;
+}
+div {
+  width: 100%;
+  height: 100%;
+  /* position: relative; */
+}
+.logo {
+  position: fixed;
+  transform: translateX(-50%) translateY(-50%);
+  left: 50%;
+  top: 50%;
+  width: 20%;
+}
+.logo:hover {
+  filter: invert(1);
+}
+.cuboid {
+  position: fixed;
+  transform: translateX(-50%) translateY(-50%);
+  left: 50%;
+  top: 50%;
+  height: auto;
+  pointer-events: all;
+  visibility: visible;
+  filter: hue-rotate(0deg) saturate(200%) invert(1);
+  -webkit-animation: spin 20s linear infinite;
+  -moz-animation: spin 20s linear infinite;
+  animation: spin 20s linear infinite;
+  animation: grow 20s linear 1;
+  -webkit-animation: grow 20s linear infinite;
+  -moz-animation: grow 20s linear 1;
+}
+
+.one {
+  width: 10vw;
+  -webkit-animation: spin 20s linear infinite;
+  -moz-animation: spin 20s linear infinite;
+  animation: spin 20s linear infinite;
+}
+.two {
+  width: 20vw;
+  -webkit-animation: spin 40s linear infinite;
+  -moz-animation: spin 40s linear infinite;
+  animation: spin 40s linear infinite;
+}
+.three {
+  width: 40vw;
+  -webkit-animation: spin 60s linear infinite;
+  -moz-animation: spin 60s linear infinite;
+  animation: spin 60s linear infinite;
+}
+.four {
+  width: 80vw;
+  -webkit-animation: spin 80s linear infinite;
+  -moz-animation: spin 80s linear infinite;
+  animation: spin 80s linear infinite;
+}
+.five {
+  width: 160vw;
+  -webkit-animation: spin 90s linear infinite;
+  -moz-animation: spin 90s linear infinite;
+  animation: spin 90s linear infinite;
+}
+.six {
+  width: 250vw;
+  -webkit-animation: spin 100s linear infinite;
+  -moz-animation: spin 100s linear infinite;
+  animation: spin 100s linear infinite;
+}
+
+@-moz-keyframes spin {
+  100% {
+    -moz-transform: translateX(-50%) translateY(-50%) rotate(360deg);
+    filter: hue-rotate(360deg) saturate(200%) invert(1);
+  }
+}
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: translateX(-50%) translateY(-50%) rotate(360deg);
+    filter: hue-rotate(360deg) saturate(200%) invert(1);
+  }
+}
+@keyframes spin {
+  100% {
+    -webkit-transform: translateX(-50%) translateY(-50%) rotate(360deg);
+    transform: translateX(-50%) translateY(-50%) rotate(360deg);
+    filter: hue-rotate(360deg) saturate(200%) invert(1);
+  }
+}
+
+@-moz-keyframes grow {
+  100% {
+    scale: 1000%;
+  }
+}
+@-webkit-keyframes grow {
+  100% {
+    scale: 1000%;
+  }
+}
+@keyframes grow {
+  100% {
+    scale: 100%;
+  }
+}
+
+/* .dancing {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  position: fixed;
+  transform: translateX(-50%) translateY(-50%);
+}
+.d1 {
+  left: 30%;
+  top: 50%;
+}
+.d2 {
+  left: 80%;
+  top: 50%;
+}
+.d3 {
+  left: 50%;
+  top: 80%;
+} */
